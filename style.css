@@ -1,0 +1,322 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfaff;
+    color: #333;
+}
+
+#header-area {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 20px;
+}
+
+
+#logo-area {
+    display: flex;
+    align-items: center;
+}
+.company-logo {
+    max-height: 45px; 
+    margin-right: 10px;
+    display: block;
+}
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4a148c; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#nav-area ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+#nav-area ul li {
+    position: relative;
+    margin-left: 10px;
+}
+#nav-area ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: #555555; 
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-bottom: 2px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+#nav-area ul li a:hover, #nav-area ul li a.active {
+    color: #4a148c; 
+    border-bottom: 2px solid #ffeb3b; 
+}
+
+#nav-area ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    flex-direction: column;
+    padding: 5px 0;
+    border-radius: 4px;
+    align-items: flex-start; 
+}
+
+#nav-area ul li ul li {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+}
+
+#nav-area ul li ul li a {
+    color: #4a148c;
+    padding: 10px 20px;
+    border-bottom: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+#nav-area ul li ul li a:hover {
+    background-color: #f3e5f5; 
+    color: #4a148c;
+    border-left: 4px solid #ffeb3b; 
+    text-align: left;
+}
+
+#nav-area ul li:hover > ul {
+    display: flex;
+}
+
+#hero-banner {
+    background: linear-gradient(rgba(74, 20, 140, 0.2), rgba(0,0,0,0.4)), url('banner.jpg') no-repeat center center/cover;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-text h2 {
+    font-size: 45px;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.hero-text p {
+    font-size: 19px;
+    max-width: 650px;
+    margin: 0 auto 25px auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.btn-primary {
+    background-color: #ffeb3b; /* Yellow Interactive Button */
+    color: #4a148c !important;
+    padding: 12px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #4a148c;
+    color: #ffffff !important;
+}
+
+#content-area {
+    max-width: 950px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border-radius: 8px;
+    text-align: center;
+}
+#content-area h2 {
+    color: #4a148c;
+}
+#content-area p {
+    line-height: 1.7;
+    color: #555;
+    text-align: justify;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background: #ebebeb;
+    margin: 25px 0;
+}
+
+#game-section {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #f3e5f5;
+    border: 2px dashed #7b1fa2;
+    border-radius: 8px;
+}
+#game-section h3 {
+    color: #4a148c;
+}
+#game-box {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+#start-btn {
+    background-color: #ffeb3b;
+    color: #4a148c;
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+#start-btn:hover {
+    background-color: #4a148c;
+    color: #ffffff;
+}
+#fruit-target {
+    display: none;
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+.game-stats {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a148c;
+}
+
+#disclaimer-area {
+    background-color: #1a0533; 
+    color: #d1c4e9; 
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 12px;
+    line-height: 1.8;
+    clear: both;
+    margin-top: 40px;
+}
+
+#disclaimer-area p {
+    margin: 5px 0;
+    color: #d1c4e9 !important; 
+}
+
+.fruit-profile-grid {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.fruit-image-container {
+    flex: 1;
+}
+.fruit-showcase-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.fruit-quick-facts {
+    flex: 1;
+    background: #fbf9fe;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4a148c;
+}
+.fruit-quick-facts h3 {
+    margin-top: 0;
+    color: #4a148c;
+}
+.facts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.facts-table td {
+    padding: 8px 4px;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 14px;
+}
+.facts-table td strong {
+    color: #4a148c;
+}
+
+.fruit-detail-section {
+    text-align: left;
+    margin-top: 30px;
+}
+.fruit-detail-section h3 {
+    color: #4a148c;
+    border-bottom: 2px solid #f3e5f5;
+    padding-bottom: 5px;
+}
+.benefit-list {
+    list-style-type: square;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+.trivia-box {
+    background-color: #fffde7;
+    border: 1px dashed #fbc02d;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 25px;
+    text-align: left;
+}
+.trivia-box strong {
+    color: #f57f17;
+}
+.back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4a148c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .fruit-profile-grid {
+        flex-direction: column;
+    }
+}

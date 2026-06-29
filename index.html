@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Group Members IML254" />
+    
+    <title>Tropika Harvest Berhad | Premium Malaysian Fruits</title>
+    <meta name="description" content="Discover the finest local fruits in Malaysia with Tropika Harvest Berhad. Premium Durian, Manggis, and more fresh from our orchards." />
+    <meta name="keywords" content="Tropika Harvest, local fruits, Malaysia, Durian, Manggis, Agrotourism, sustainable plantation" />
+    <meta name="robots" content="index, follow" />
+    
+    <meta property="og:title" content="Tropika Harvest Berhad | Fresh Local Fruits" />
+    <meta property="og:description" content="Experience the rich heritage and vibrant flavors of Malaysian tropical fruits fresh from our orchards." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/manggis.jpg" />
+    
+    <link rel="icon" type="jpg" href="favicon.jpg" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+	
+    <style type="text/css">
+        .bottom-nav-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            width: 100%;
+        }
+        .portfolio-home-btn {
+            display: inline-block;
+            background-color: #4a148c;
+            padding: 8px 12px; 
+            text-decoration: none;
+            border-radius: 20px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            width: 65px; 
+            text-align: center;
+        }
+        .portfolio-home-btn .home-icon {
+            font-size: 16px; 
+            display: block;
+            margin-bottom: 2px;
+        }
+        .portfolio-home-btn .home-text {
+            font-size: 10px; 
+            color: #ffffff;
+            display: block;
+            font-weight: normal;
+            text-transform: none;
+        }
+        .portfolio-home-btn:hover {
+            background-color: #ffeb3b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        .portfolio-home-btn:hover .home-text {
+            color: #4a148c; 
+        }
+
+        /* === ADVANCED SEARCH ENGINE ENGINE CSS === */
+        .search-wrapper-wrapper {
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 0 20px;
+            font-family: Arial, sans-serif;
+        }
+        .search-engine-box {
+            display: flex;
+            background: #ffffff;
+            border: 2px solid #4a148c;
+            border-radius: 30px;
+            padding: 4px;
+            box-shadow: 0 4px 15px rgba(74, 20, 140, 0.1);
+            transition: all 0.3s ease;
+        }
+        .search-engine-box:focus-within {
+            box-shadow: 0 6px 20px rgba(74, 20, 140, 0.25);
+            transform: translateY(-2px);
+        }
+        .search-input-field {
+            flex: 1;
+            border: none;
+            background: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            color: #333333;
+            outline: none;
+            width: 100%;
+        }
+        .search-yellow-btn {
+            background-color: #ffeb3b;
+            color: #4a148c;
+            border: none;
+            padding: 0 25px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .search-yellow-btn:hover {
+            background-color: #4a148c;
+            color: #ffeb3b;
+        }
+        .search-yellow-btn:active {
+            transform: scale(0.96);
+        }
+        
+        /* Advanced dynamic "Not Found" card container state */
+        #search-empty-state {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            background: #fdfdfd;
+            border: 1px dashed #ccc;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        #search-empty-state h4 {
+            color: #777777;
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+        #search-empty-state p {
+            color: #999999;
+            margin: 0;
+            font-size: 13px;
+        }
+     </style>
+</head>
+<body>
+
+    <div id="header-area">
+        <div class="header-container">
+            <div id="logo-area">
+                <img src="logo.jpg" alt="Tropika Harvest Logo" class="company-logo" />
+                <span class="logo-text">Tropika Harvest</span>
+            </div>
+
+            <div id="nav-area">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#">Fruit Portfolio &#9662;</a>
+                        <ul>
+                            <li><a href="manggis.html">1. Manggis</a></li>
+                            <li><a href="mata kucing.html">2. Mata Kucing</a></li>
+                            <li><a href="cempedak.html">3. Cempedak</a></li>
+                            <li><a href="mangga.html">4. Mangga</a></li>
+                            <li><a href="duku.html">5. Duku</a></li>
+                            <li><a href="durian.html">6. Durian</a></li>
+                            <li><a href="salak.html">7. Salak</a></li>
+                            <li><a href="jambu batu.html">8. Jambu Batu</a></li>
+                            <li><a href="pisang.html">9. Pisang</a></li>
+                            <li><a href="rambutan.html">10. Rambutan</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="resources.html">Media Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="group.html">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero-banner">
+        <div class="hero-text">
+            <h2>Fresh From Our Malaysian Orchards</h2>
+            <p>Experience the rich heritage and vibrant flavors of the tropics. Hand picked at peak ripeness and sustainably grown for you.</p>
+            <a href="about.html" class="btn-primary">Discover Our Story</a>
+        </div>
+    </div>
+
+    <div class="search-wrapper-wrapper">
+        <div class="search-engine-box">
+            <input type="text" id="advancedSearchInput" class="search-input-field" placeholder="Search premium fruits (e.g. Mango, Durian...)" onkeyup="liveFruitSearch()" />
+            <button type="button" class="search-yellow-btn" onclick="liveFruitSearch()">Search</button>
+        </div>
+        
+        <div id="search-empty-state">
+            <h4>No Fruits Found 🔍</h4>
+            <p>We couldn't find matches for your search. Try looking up another tropical fruit alternative!</p>
+        </div>
+    </div>
+
+    <div id="content-area">
+        <h2>Welcome to Tropika Harvest</h2>
+        <p style="text-align: center;">At Tropika Harvest Berhad, we are dedicated to providing the ultimate premium quality of local Malaysian fruits. From our hilly durian ridges to our lush mangosteen groves, our 500 acre sustainable plantation ensures that every fruit is packed with nutrition, flavor and love.</p>
+        
+        <hr />
+
+        <style type="text/css">
+            .fruit-showcase-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 30px 0;
+                width: 100%;
+                background-color: #fafafa;
+            }
+            .fruit-display-card {
+                display: flex;
+                flex-direction: column;
+                width: 270px;
+                margin: 18px;
+                background-color: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px; 
+                box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+                overflow: hidden;
+                text-align: left;
+                transition: all 0.3s ease;
+            }
+            .fruit-display-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 22px rgba(74, 20, 140, 0.15);
+                border-color: #4a148c; 
+            }
+            .fruit-card-image {
+                height: 190px;
+                background-color: #f9f9f9;
+                overflow: hidden;
+                position: relative;
+            }
+            .fruit-card-image img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition: transform 0.4s ease;
+            }
+            .fruit-display-card:hover .fruit-card-image img {
+                transform: scale(1.05);
+            }
+            .fruit-card-body {
+                padding: 22px;
+                text-align: center;
+                display: flex;         
+                flex-direction: column;
+                flex-grow: 1;
+            }
+            .fruit-card-title {
+                color: #4a148c; 
+                font-size: 19px;
+                font-weight: bold;
+                margin: 0 0 10px 0;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            #content-area .fruit-card-text {
+                color: #555555;
+                font-size: 13px;
+                line-height: 1.6;
+                margin: 0 0 20px 0;
+                text-align: left;
+                padding: 0 5px;
+                flex-grow: 1;
+            }
+            .fruit-card-btn {
+                display: inline-block;
+                background-color: #4a148c; 
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: bold;
+                padding: 10px 24px;
+                border-radius: 4px;
+                border: 1px solid #4a148c;
+                transition: all 0.3s ease;
+                width: 70%;
+                margin: 0 auto;
+            }
+            .fruit-card-btn:hover {
+                background-color: #ffeb3b; 
+                color: #4a148c; 
+                border-color: #4a148c;
+            }
+            
+            /* Game Button Custom Styling */
+            #start-btn {
+                background-color: #4a148c;
+                color: #ffffff;
+                border: 1px solid #4a148c;
+                padding: 10px 20px;
+                font-size: 14px;
+                font-weight: bold;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+            #start-btn:hover {
+                background-color: #ffeb3b;
+                color: #4a148c;
+                border-color: #4a148c;
+            }
+        </style>
+
+        <div class="fruit-showcase-container">
+            
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/manggis.jpg" alt="Manggis" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Manggis</div>
+                    <p class="fruit-card-text">Known as the Queen of Fruits that offer a uniquely sweet and tangy juicy flavor with rich antioxidant properties.</p>
+                    <a href="manggis.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/mata kucing.jpg" alt="Mata Kucing" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Mata Kucing</div>
+                    <p class="fruit-card-text">A close relative of the longan. These small, translucent gems deliver a bursting with sweet tropical bliss.</p>
+                    <a href="mata kucing.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/cempedak.jpg" alt="Cempedak" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Cempedak</div>
+                    <p class="fruit-card-text">Famous for its intensely sweet, arils just like custard and strong along with pleasant aroma when fully ripe.</p>
+                    <a href="cempedak.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/mangga.jpg" alt="Mangga" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Mangga</div>
+                    <p class="fruit-card-text">Hand picked premium local mangoes which highly celebrated for their rich, smooth and honey sweet flesh.</p>
+                    <a href="mangga.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/duku.jpg" alt="Duku" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Duku</div>
+                    <p class="fruit-card-text">Thick skinned and sweet. These cluster fruits contain a wonderfully refreshing and clear segment texture.</p>
+                    <a href="duku.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/durian.jpg" alt="Durian" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Durian</div>
+                    <p class="fruit-card-text">The absolute King of Fruits that feature a rich, creamy and golden bittersweet custard profile.</p>
+                    <a href="durian.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/salak.jpg" alt="Salak" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Salak</div>
+                    <p class="fruit-card-text">Also called Snake Fruit due to its scaly skin which offer a unique crunchy texture with a sweet acidic bite.</p>
+                    <a href="salak.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/jambu batu.jpg" alt="Jambu Batu" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Jambu Batu</div>
+                    <p class="fruit-card-text">Crisp and packed with high Vitamin C. Our local guavas make the perfect healthy as well as refreshing snack.</p>
+                    <a href="jambu batu.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/pisang.jpg" alt="Pisang" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Pisang</div>
+                    <p class="fruit-card-text">Naturally sweet and highly energetic bananas grown sustainably under the beautiful Malaysian sun.</p>
+                    <a href="pisang.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+            <div class="fruit-display-card">
+                <div class="fruit-card-image">
+                    <img src="images/rambutan.jpg" alt="Rambutan" />
+                </div>
+                <div class="fruit-card-body">
+                    <div class="fruit-card-title">Rambutan</div>
+                    <p class="fruit-card-text">Recognizable by its hairy red skin that contain a beautifully translucent, sweet and firm juicy flesh.</p>
+                    <a href="rambutan.html" class="fruit-card-btn">View Details</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="game-section">
+            <h3>🍇 Mini Game: Catch the Ripe Fruit! 🌟</h3>
+            <p>Click the button below to start. Click on the fruit as many times as you can before time runs out!</p>
+            
+            <div id="game-box">
+                <button type="button" id="start-btn" onclick="startGame()">Start Game</button>
+                <div id="fruit-target" onclick="catchFruit()">🍋</div>
+            </div>
+            
+            <p class="game-stats">Score: <span id="score-val">0</span> | Time Left: <span id="time-val">15</span>s</p>
+        </div>
+    </div>
+
+    <div id="disclaimer-area">
+        <p>Disclaimer: This website is not the official website of Tropika Harvest Berhad. This website was developed for the purpose of learning XHTML &amp; CSS only as required for the IML254 course project.</p>
+        <p>Best viewed on Google Chrome &amp; Mozilla Firefox | Resolution: 1920x1080 | Last Updated: June 2026</p>
+        <p>&copy; 2026 Tropika Harvest Berhad. All Rights Reserved.</p>
+    </div>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var score = 0;
+        var timeLeft = 15;
+        var gameInterval;
+        var fruitFruits = ['🍋', '🍌', '🥭', '🍇', '🍉'];
+
+        // === ADVANCED LIVE FILTERING JAVASCRIPT ===
+        function liveFruitSearch() {
+            var inputVal = document.getElementById('advancedSearchInput').value.toLowerCase().trim();
+            var cards = document.getElementsByClassName('fruit-display-card');
+            var matchedCounter = 0;
+            
+            for (var i = 0; i < cards.length; i++) {
+                var titleText = cards[i].getElementsByClassName('fruit-card-title')[0].textContent || cards[i].getElementsByClassName('fruit-card-title')[0].innerText;
+                titleText = titleText.toLowerCase();
+                
+                if (titleText.indexOf(inputVal) > -1) {
+                    cards[i].style.display = 'flex'; // Reset display layout cleanly
+                    matchedCounter++;
+                } else {
+                    cards[i].style.display = 'none'; // Fade out card natively
+                }
+            }
+            
+            // Handle visual display state when no conditions match search queries
+            var emptyMessage = document.getElementById('search-empty-state');
+            if (matchedCounter === 0) {
+                emptyMessage.style.display = 'block';
+            } else {
+                emptyMessage.style.display = 'none';
+            }
+        }
+
+        function startGame() {
+            score = 0;
+            timeLeft = 15;
+            document.getElementById('score-val').innerHTML = score;
+            document.getElementById('time-val').innerHTML = timeLeft;
+            document.getElementById('start-btn').style.display = 'none';
+            document.getElementById('fruit-target').style.display = 'block';
+            
+            moveFruit();
+            
+            gameInterval = setInterval(function() {
+                timeLeft--;
+                document.getElementById('time-val').innerHTML = timeLeft;
+                if(timeLeft <= 0) {
+                    clearInterval(gameInterval);
+                    document.getElementById('fruit-target').style.display = 'none';
+                    document.getElementById('start-btn').style.display = 'inline-block';
+                    alert('Game Over! Your final score is ' + score + '. Good job!');
+                }
+            }, 1000);
+        }
+
+        function moveFruit() {
+            var box = document.getElementById('game-box');
+            var fruit = document.getElementById('fruit-target');
+            
+            var maxX = box.clientWidth - 50;
+            var maxY = box.clientHeight - 50;
+            
+            var randomX = Math.floor(Math.random() * maxX);
+            var randomY = Math.floor(Math.random() * maxY);
+            
+            var randomFruit = fruitFruits[Math.floor(Math.random() * fruitFruits.length)];
+            
+            fruit.style.left = randomX + 'px';
+            fruit.style.top = randomY + 'px';
+            fruit.innerHTML = randomFruit;
+        }
+
+        function catchFruit() {
+            score++;
+            document.getElementById('score-val').innerHTML = score;
+            moveFruit();
+        }
+        //]]>
+    </script>
+</body>
+</html>
