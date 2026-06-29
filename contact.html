@@ -165,20 +165,20 @@
                     <h3 style="color: #4a148c; margin-top: 0; font-size: 18px;">Send Us a Message</h3>
                     <p style="font-size: 13px; color: #666; margin-top: -5px; margin-bottom: 15px;">Fill up the short form below and our team will get back to you shortly.</p>
                     
-                    <form action="#" method="post" autocomplete="off">
+                    <form id="contactForm" action="#" method="post" onsubmit="return validateContactForm();" autocomplete="off">
                         <table style="width: 100%; border-collapse: collapse;">
                             <tr>
                                 <td style="padding: 6px 0; color: #4a148c; font-weight: bold; width: 25%;"><label for="txt-name">Full Name:</label></td>
-                                <td style="padding: 6px 0;"><input type="text" id="txt-name" name="name" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" placeholder="Your Name" /></td>
+                                <td style="padding: 6px 0;"><input type="text" id="txt-name" name="name" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; background-color: #ffffff;" placeholder="Your Name" autocomplete="new-password" /></td>
                             </tr>
                             <tr>
                                 <td style="padding: 6px 0; color: #4a148c; font-weight: bold;"><label for="txt-email">Email:</label></td>
-                                <td style="padding: 6px 0;"><input type="text" id="txt-email" name="email" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" placeholder="yourname@email.com" /></td>
+                                <td style="padding: 6px 0;"><input type="text" id="txt-email" name="email" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; background-color: #ffffff;" placeholder="yourname@email.com" autocomplete="new-password" /></td>
                             </tr>
                             <tr>
                                 <td style="padding: 6px 0; color: #4a148c; font-weight: bold;"><label for="sel-subject">Subject:</label></td>
                                 <td style="padding: 6px 0;">
-                                    <select id="sel-subject" name="subject" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; color: #333;">
+                                    <select id="sel-subject" name="subject" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; color: #333; background-color: #ffffff;">
                                         <option value="general">General Inquiry</option>
                                         <option value="bulk">Bulk Supply / Wholesale purchase</option>
                                         <option value="farm">Farm Visit Request</option>
@@ -187,7 +187,7 @@
                             </tr>
                             <tr>
                                 <td style="padding: 6px 0; color: #4a148c; font-weight: bold; vertical-align: top;"><label for="txt-msg">Message:</label></td>
-                                <td style="padding: 6px 0;"><textarea id="txt-msg" name="message" rows="5" cols="20" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-family: sans-serif;" placeholder="Write your message here..."></textarea></td>
+                                <td style="padding: 6px 0;"><textarea id="txt-msg" name="message" rows="5" cols="20" style="width: 95%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; font-family: sans-serif; background-color: #ffffff;" placeholder="Write your message here..."></textarea></td>
                             </tr>
                             <tr>
                                 <td></td>
@@ -217,5 +217,34 @@
         <p>&copy; 2026 Tropika Harvest Berhad. All Rights Reserved.</p>
     </div>
 
+    <script type="text/javascript">
+        //<![CDATA[
+        function validateContactForm() {
+            var name = document.getElementById("txt-name").value.trim();
+            var email = document.getElementById("txt-email").value.trim();
+            var message = document.getElementById("txt-msg").value.trim();
+            
+            if (name === "") {
+                alert("Warning: Please fill in your Full Name before sending your message.");
+                document.getElementById("txt-name").focus();
+                return false;
+            }
+            if (email === "") {
+                alert("Warning: Please fill in your Email Address.");
+                document.getElementById("txt-email").focus();
+                return false;
+            }
+            if (message === "") {
+                alert("Warning: Please write your message details.");
+                document.getElementById("txt-msg").focus();
+                return false;
+            }
+
+            alert("Success! Thank you for contacting us. Your message has been processed.");
+            document.getElementById("contactForm").reset();
+            return false; 
+        }
+        //]]>
+    </script>
 </body>
 </html>
