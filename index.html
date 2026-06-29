@@ -176,8 +176,8 @@
 
     <div class="search-wrapper-wrapper">
         <div class="search-engine-box">
-            <input type="text" id="advancedSearchInput" class="search-input-field" placeholder="Search premium fruits (e.g. Mango, Durian...)" onkeyup="liveFruitSearch()" />
-            <button type="button" class="search-yellow-btn" onclick="liveFruitSearch()">Search</button>
+            <input type="text" id="advancedSearchInput" class="search-input-field" placeholder="Search premium fruits (e.g. Mango, Durian...)" onkeyup="liveFruitSearch(false)" />
+            <button type="button" class="search-yellow-btn" onclick="liveFruitSearch(true)">Search</button>
         </div>
         
         <div id="search-empty-state">
@@ -237,7 +237,7 @@
             .fruit-card-body {
                 padding: 22px;
                 text-align: center;
-                display: flex;         
+                display: flex;          
                 flex-direction: column;
                 flex-grow: 1;
             }
@@ -297,7 +297,7 @@
             }
         </style>
 
-        <div class="fruit-showcase-container">
+        <div id="fruitShowcaseSection" class="fruit-showcase-container">
             
             <div class="fruit-display-card">
                 <div class="fruit-card-image">
@@ -437,32 +437,38 @@
         var gameInterval;
         var fruitFruits = ['🍋', '🍌', '🥭', '🍇', '🍉'];
 
-        // === ADVANCED LIVE FILTERING JAVASCRIPT ===
-        function liveFruitSearch() {
+        // === JAVASCRIPT CARIAN DENGAN REKA BENTUK SKROL SLIDE DOWN ===
+        function liveFruitSearch(isButtonClick) {
             var inputVal = document.getElementById('advancedSearchInput').value.toLowerCase().trim();
             var cards = document.getElementsByClassName('fruit-display-card');
             var matchedCounter = 0;
             
             for (var i = 0; i < cards.length; i++) {
-                // Get ALL text inside the specific card container (Title + Paragraph description + Button layout text)
                 var cardContentText = cards[i].textContent || cards[i].innerText;
                 cardContentText = cardContentText.toLowerCase();
                 
-                // Compare input value against the entire content block of the card
                 if (cardContentText.indexOf(inputVal) > -1) {
-                    cards[i].style.display = 'flex'; // Reset display layout cleanly
+                    cards[i].style.display = 'flex'; 
                     matchedCounter++;
                 } else {
-                    cards[i].style.display = 'none'; // Hide out card natively
+                    cards[i].style.display = 'none'; 
                 }
             }
             
-            // Handle visual display state when no conditions match search queries
             var emptyMessage = document.getElementById('search-empty-state');
             if (matchedCounter === 0) {
                 emptyMessage.style.display = 'block';
             } else {
                 emptyMessage.style.display = 'none';
+                
+                // BARU: Meluncur turun secara automatik ke senarai buah jika ada keputusan ditemui
+                // Skrol hanya dicetuskan jika pengguna klik butang Search ATAU taip lebih daripada 2 huruf
+                if (isButtonClick || inputVal.length > 2) {
+                    var showcaseSection = document.getElementById('fruitShowcaseSection');
+                    if (showcaseSection && typeof showcaseSection.scrollIntoView === 'function') {
+                        showcaseSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }
             }
         }
 
