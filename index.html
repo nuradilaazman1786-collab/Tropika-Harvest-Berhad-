@@ -445,14 +445,16 @@
             var matchedCounter = 0;
             
             for (var i = 0; i < cards.length; i++) {
-                var titleText = cards[i].getElementsByClassName('fruit-card-title')[0].textContent || cards[i].getElementsByClassName('fruit-card-title')[0].innerText;
-                titleText = titleText.toLowerCase();
+                // Get ALL text inside the specific card container (Title + Paragraph description + Button layout text)
+                var cardContentText = cards[i].textContent || cards[i].innerText;
+                cardContentText = cardContentText.toLowerCase();
                 
-                if (titleText.indexOf(inputVal) > -1) {
+                // Compare input value against the entire content block of the card
+                if (cardContentText.indexOf(inputVal) > -1) {
                     cards[i].style.display = 'flex'; // Reset display layout cleanly
                     matchedCounter++;
                 } else {
-                    cards[i].style.display = 'none'; // Fade out card natively
+                    cards[i].style.display = 'none'; // Hide out card natively
                 }
             }
             
