@@ -46,8 +46,6 @@
         .portfolio-home-btn:hover .home-text {
             color: #4a148c; 
         }
-
-
      </style>
 </head>
 <body>
@@ -95,17 +93,17 @@
 
         <div style="text-align: left; max-width: 700px; margin: 0 auto; background: #FFFDF0; padding: 30px; border-radius: 8px; border-left: 4px solid #4a148c; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
             
-            <form action="mailto:nuradilaazman1786@gmail.com" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
+            <form id="feedbackForm" action="#" method="post" onsubmit="return validateForm();" autocomplete="off">
                 
                 <div class="form-group">
                     <label for="fullname"><strong>Full Name</strong></label>
-                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="e.g. Ahmad Zaki Bin Rahman" style="width: 100%; padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #ffffff;" />
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="e.g. Ahmad Zaki Bin Rahman" style="width: 100%; padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #ffffff;" autocomplete="off" />
                     <span class="benefit-list" style="font-size: 12px; color: #666; font-style: italic; display: block;">Example: Enter your complete official registration name.</span>
                 </div>
 
                 <div class="form-group" style="margin-top: 15px;">
                     <label for="email"><strong>Email Address</strong></label>
-                    <input type="text" id="email" name="email" class="form-control" placeholder="e.g. name@company.com.my" style="width: 100%; padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #ffffff;" />
+                    <input type="text" id="email" name="email" class="form-control" placeholder="e.g. name@company.com.my" style="width: 100%; padding: 10px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background-color: #ffffff;" autocomplete="off" />
                     <span class="benefit-list" style="font-size: 12px; color: #666; font-style: italic; display: block;">Example: institutional@procurement.my</span>
                 </div>
 
@@ -183,7 +181,7 @@
                 }
             }
 
-            // Validation Alerts
+            
             if (name === "") {
                 alert("Warning: Please fill in your Full Name before submitting.");
                 document.getElementById("fullname").focus();
@@ -202,16 +200,27 @@
             if (!ratingSelected) {
                 alert("Warning: Please assign a Quality Rating for our portfolio.");
                 return false;
-            }
-            if (comments === "") {
-                alert("Warning: Please enter your Corporate Observations or Notes.");
-                document.getElementById("comments").focus();
-                return false;
+            
             }
 
-            // If everything is completely filled
-            alert("Success! Thank you for your feedback. Opening your mail client now.");
-            return true;
+            
+            var subject = encodeURIComponent("Tropika Harvest Feedback from " + name);
+            var body = encodeURIComponent(
+                "Full Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Fruit Interest: " + fruit + "\n" +
+                "Comments: " + comments
+            );
+            
+            
+            var mailtoUrl = "mailto:nuradilaazman1786@gmail.com?subject=" + subject + "&body=" + body;
+            window.location.href = mailtoUrl;
+
+            alert("Success! Thank you for your feedback. Your entry has been processed.");
+            
+            document.getElementById("feedbackForm").reset();
+
+            return false; // Menghalang sebarang isu reload atau amaran luaran daripada browser
         }
         //]]>
     </script>
